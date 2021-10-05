@@ -74,6 +74,83 @@
         <li>Профессиональные консультации!</li>
       </ol>
     </section>
+
+    <section class="bicycles-types" id="bicycles-types">
+      <div class="container">
+        <h2>Виды велосипедов</h2>
+        <div class="bicycles-types__wrapper">
+          <figure class="bicycles-types__card">
+            <!-- Desktop 1х: 342px; 2x: 684px   Tablet/Mobile 1х: 270px; 2x: 540px-->
+            <picture>
+              <source
+                type="image/webp"
+                media="(max-width: 1023px)"
+                srcset="img/tab-road-bike@1x.webp 1x, img/tab-road-bike@2x.webp 2x">
+              <source
+                type="image/webp"
+                srcset="img/road-bike@1x.webp 1x, img/road-bike@2x.webp 2x">
+              <img
+                srcset="
+                  img/tab-road-bike@1x.jpg 270w,
+                  img/tab-road-bike@2x.jpg 540w,
+                  img/road-bike@1x.jpg 342w,
+                  img/road-bike@2x.jpg 684w"
+                sizes="(max-width: 1023px) 270px, 342px"
+                src="img/road-bike@1x.jpg"
+                alt="Серый велосипед с большой черной корзиной на багажнике возле кирпичной стены."
+                width="342" height="503">
+            </picture>
+            <figcaption>Дорожный велосипед</figcaption>
+          </figure>
+          <figure class="bicycles-types__card">
+            <!-- Desktop 1х: 342px; 2x: 684px   Tablet/Mobile 1х: 270px; 2x: 540px-->
+            <picture>
+              <source
+                type="image/webp"
+                media="(max-width: 1023px)"
+                srcset="img/tab-mountain-bike@1x.webp 1x, img/tab-mountain-bike@2x.webp 2x">
+              <source
+                type="image/webp"
+                srcset="img/mountain-bike@1x.webp 1x, img/mountain-bike@2x.webp 2x">
+              <img
+                srcset="
+                  img/tab-mountain-bike@1x.jpg 270w,
+                  img/tab-mountain-bike@2x.jpg 540w,
+                  img/mountain-bike@1x.jpg 342w,
+                  img/mountain-bike@2x.jpg 684w"
+                sizes="(max-width: 1023px) 270px, 342px"
+                src="img/mountain-bike@1x.jpg"
+                alt="Черный велосипед на фоне гор."
+                width="342" height="566">
+            </picture>
+            <figcaption>Горный велосипед</figcaption>
+          </figure>
+          <figure class="bicycles-types__card">
+            <!-- Desktop 1х: 342px; 2x: 684px   Tablet/Mobile 1х: 270px; 2x: 540px-->
+            <picture>
+              <source
+                type="image/webp"
+                media="(max-width: 1023px)"
+                srcset="img/tab-kids-bike@1x.webp 1x, img/tab-kids-bike@2x.webp 2x">
+              <source
+                type="image/webp"
+                srcset="img/kids-bike@1x.webp 1x, img/kids-bike@2x.webp 2x">
+              <img
+              srcset="
+                  img/tab-kids-bike@1x.jpg 270w,
+                  img/tab-kids-bike@2x.jpg 540w,
+                  img/kids-bike@1x.jpg 342w,
+                  img/kids-bike@2x.jpg 684w"
+                sizes="(max-width: 1023px) 270px, 342px"
+                src="img/kids-bike@1x.jpg"
+                alt="Бело-розовый велосипед с корзинкой возле руля и дополнительным сидением для кукол сзади."
+                width="342" height="513">
+            </picture>
+            <figcaption>Детский велосипед</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
   </main>
   <script src="js/main.js"></script>
 
