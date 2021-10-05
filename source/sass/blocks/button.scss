@@ -1,0 +1,24 @@
+.button {
+display: block;
+width: 100%;
+padding: 15px;
+font-family: inherit;
+font-size: 15px;
+line-height: 21px;
+font-weight: 600;
+text-align: center;
+color: $color-black;
+background-color: $color-accent-100;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba($color-accent-100, 0.7);
+
+}
+
+.button:active {
+  background-color: rgba($color-accent-100, 0.3);
+}

@@ -1,0 +1,132 @@
+.main-nav {
+  position: relative;
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-nav li {
+  margin-right: 135px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.main-nav li:last-child {
+  margin-right: 0;
+}
+
+.main-nav a {
+  line-height: 32px;
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  color: rgba($color-white, 0.7);
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  color: $color-accent-100;
+}
+
+.main-nav a:active {
+  color: $color-white;
+}
+
+@media (min-width: $desktop-width-only) {
+  .main-nav ul::before{
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    margin-left: -437px;
+    width: 874px;
+    height: 1px;
+    background-color: rgba($color-white, 0.2);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .main-nav ul {
+    display: none;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .main-nav__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: $color-accent-100;
+    background-image: url("../img/menu-open.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+  }
+
+  // Меню открыто
+  .main-nav--opened .main-nav__toggle {
+    background-color: $color-white;
+    background-image: url("../img/menu-close.svg");
+  }
+
+  .main-nav--opened ul {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    background-color: $color-white;
+  }
+
+  .main-nav--opened li {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+
+  .main-nav--opened a {
+    position: relative;
+    display: block;
+    padding: 16px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: $color-gray-500;
+    background-color: $color-gray-200;
+  }
+
+  .main-nav--opened a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    margin-top: -6px;
+    width: 8px;
+    height: 12px;
+    background-image: url("../img/menu-icon.svg");
+    background-repeat: no-repeat;
+  }
+
+  // Нет js
+  .main-nav--no-js ul{
+    position: static;
+    display: block;
+  }
+  .main-nav--no-js .main-nav__toggle{
+    display: none;
+  }
+}
