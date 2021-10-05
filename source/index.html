@@ -151,6 +151,44 @@
         </div>
       </div>
     </section>
+
+    <section class="video" id="video">
+      <div class="container">
+        <h2>Видео про велосипеды</h2>
+        <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        <figure class="video__multimedia multimedia">
+          <!-- Desktop 1х: 929px; 2x: 1858px   Tablet 1х: 503px; 2x: 1006px   Mobile 1х: 288px; 2x: 576px-->
+          <picture>
+            <source
+              type="image/webp"
+              media="(max-width: 767px)"
+              srcset="img/mob-video-bike@1x.webp 1x, img/mob-video-bike@2x.webp 2x">
+            <source
+              type="image/webp"
+              media="(max-width: 1023px)"
+              srcset="img/tab-video-bike@1x.webp 1x, img/tab-video-bike@2x.webp 2x">
+            <source
+              type="image/webp"
+              srcset="img/video-bike@1x.webp 1x, img/video-bike@2x.webp 2x">
+            <img
+              srcset="
+                img/mob-video-bike@1x.jpg 288w,
+                img/mob-video-bike@2x.jpg 576w,
+                img/tab-video-bike@1x.jpg 503w,
+                img/tab-video-bike@2x.jpg 1006w,
+                img/video-bike@1x.jpg 929w,
+                img/video-bike@2x.jpg 1858w"
+              sizes="(max-width: 767px) 288px, (max-width: 1023px) 503px, 929px"
+              src="img/video-bike@1x.jpg"
+              alt="Абсолютно черный велосипед крупным планом на темном фоне"
+              width="929" height="522">
+          </picture>
+          <a class="multimedia__link" href="#">
+            <span class="visually-hidden">Воспроизвести видео</span>
+          </a>
+        </figure>
+      </div>
+    </section>
   </main>
   <script src="js/main.js"></script>
 
