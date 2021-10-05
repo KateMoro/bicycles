@@ -1,0 +1,50 @@
+.contacts-list {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 90px;
+}
+
+.contacts-list li:first-child {
+  margin-left: -18px;
+}
+
+.contacts-list a {
+  display: flex;
+  align-items: center;
+  line-height: 22px;
+  color: rgba($color-black, 0.5);
+  text-decoration: none;
+}
+
+.contacts-list a:hover {
+  color: $color-accent-100;
+}
+
+.contacts-list a:active {
+  opacity: 0.5;
+}
+
+.contacts-list svg {
+  margin-right: 15px;
+  fill: none;
+}
+
+@media (max-width: $tablet-width) {
+  .contacts-list li:first-child {
+    margin-left: -10px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .contacts-list {
+    gap: 22px;
+  }
+
+  .contacts-list li:first-child {
+    margin-left: 0;
+  }
+}

@@ -190,6 +190,41 @@
       </div>
     </section>
   </main>
+
+  <footer class="page-footer container" id="contacts">
+    <h2>Как нас найти?</h2>
+    <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+    <!-- 1х: 957px; 2x: 1914px -->
+    <picture>
+      <source
+        type="image/webp"
+        srcset="img/map@1x.webp 1x, img/map@2x.webp 2x">
+      <img
+        src="img/map@1x.png"
+        srcset="img/map@2x.png 2x"
+        alt="Карта"
+        width="957" height="530">
+    </picture>
+    <ul class="page-footer__list contacts-list">
+      <li>
+        <a href="mailto:puteshestviemechta@gmail.ru">
+          <svg aria-hidden="true" focusable="false" width="26" height="20">
+            <use href="img/sprite_auto.svg#icon-email"></use>
+          </svg>
+          puteshestviemechta@gmail.ru
+        </a>
+      </li>
+      <li>
+        <a href="href=tel:+749978468446">
+          <svg aria-hidden="true" focusable="false" width="22" height="24">
+            <use href="img/sprite_auto.svg#icon-phone"></use>
+          </svg>
+          +7 (499) -784-684-46
+        </a>
+      </li>
+    </ul>
+  </footer>
+
   <script src="js/main.js"></script>
 
 </body>
