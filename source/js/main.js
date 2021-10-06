@@ -6,12 +6,19 @@ const form = pageHeader.querySelector('.form');
 const nameInput = form.querySelector('input[type="text"]');
 const phoneInput = form.querySelector('input[type="tel"]');
 
-pageHeader.classList.remove('page-header--no-js');
-mainNav.classList.remove('main-nav--opened', 'main-nav--no-js');
+if (pageHeader) {
+  pageHeader.classList.remove('page-header--no-js');
+}
 
-mainNavToggle.addEventListener('click', () => {
-  mainNav.classList.toggle('main-nav--opened');
-});
+if (mainNav) {
+  mainNav.classList.remove('main-nav--opened', 'main-nav--no-js');
+}
+
+if (mainNavToggle) {
+  mainNavToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('main-nav--opened');
+  });
+}
 
 let isStorageSupport = true;
 let storageName = '';
