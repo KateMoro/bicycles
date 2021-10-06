@@ -8,7 +8,7 @@
   font-size: 17px;
   line-height: 28px;
   font-weight: 600;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   color: $color-white;
   text-align: center;
 }
@@ -31,7 +31,7 @@
 }
 
 .form__field input::placeholder {
-  font-family: 'Open Sans';
+  font-family: inherit;
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
