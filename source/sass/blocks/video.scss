@@ -64,6 +64,9 @@
 @media (max-width: $mobile-width) {
   .video {
     padding-top: 84px;
+    padding-bottom: 11px;
+    padding-left: 16px;
+    padding-right: 16px;
     background-image: linear-gradient(to bottom,
       $color-gray-900 0,
       $color-gray-900 384px,
@@ -73,12 +76,10 @@
 
   .video p {
     margin-bottom: 54px;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .video__multimedia {
-    width: 288px;
-    height: 162px;
+    width: 100%;
+    height: auto;
   }
 }
