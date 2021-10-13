@@ -19,25 +19,31 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
-}
-
-.bicycles-types__wrapper::before {
-  content: "";
-  position: absolute;
-  top: 167px;
-  left: -12px;
-  width: 180px;
-  height: 180px;
-  border: 27px solid $color-accent-100;
-  border-radius: 50%;
 }
 
 .bicycles-types__card {
   position: relative;
   margin: 0;
-  width: calc((100% - 100px) / 3);
+  width: calc(33.33% - 50px);
   max-width: 342px;
+  z-index: 2;
+}
+
+.bicycles-types__card {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.bicycles-types__card:nth-child(3n + 1)::before {
+  content: "";
+  position: absolute;
+  top: 157px;
+  left: -60px;
+  width: 180px;
+  height: 180px;
+  border: 27px solid $color-accent-100;
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .bicycles-types__card:nth-child(3n + 3)::before {
@@ -97,7 +103,7 @@
 @media (max-width: $tablet-width) {
   .bicycles-types {
     padding-top: 50px;
-    padding-bottom: 70px;
+    padding-bottom: 22px;
   }
 
   .bicycles-types h2 {
@@ -107,13 +113,13 @@
   }
 
   .bicycles-types__card {
-    width: calc((100% - 50px) / 2);
-    flex-basis: 270px;
+    width: 37.6%;
+    margin-bottom: 50px;
   }
 
-  .bicycles-types__wrapper::before {
+  .bicycles-types__card:nth-child(3n + 1)::before {
     top: 202px;
-    left: 27px;
+    left: -37px;
     width: 127px;
     height: 127px;
     border-width: 18px;
@@ -130,20 +136,21 @@
 
 @media (max-width: $mobile-width) {
   .bicycles-types {
-    padding-top: 63px;
-    padding-bottom: 53px;
+    padding-top: 50px;
+    padding-bottom: 13px;
   }
 
   .bicycles-types__wrapper {
-    row-gap: 42px;
+    display: block;
   }
 
   .bicycles-types__card {
-    width: 100%;
+    margin: 0 auto 42px;
+    width: 270px;
   }
 
-  .bicycles-types__wrapper::before {
-    top: 201px;
+  .bicycles-types__card:nth-child(3n + 1)::before {
+    top: 200px;
     left: -25px;
   }
 
