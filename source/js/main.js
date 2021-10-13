@@ -1,14 +1,11 @@
 const pageHeader = document.querySelector('.page-header');
 const mainNav = pageHeader.querySelector('.main-nav');
 const mainNavToggle = mainNav.querySelector('.main-nav__toggle');
+const mainNavLinks = mainNav.querySelectorAll('a');
 
 const form = pageHeader.querySelector('.form');
 const nameInput = form.querySelector('input[type="text"]');
 const phoneInput = form.querySelector('input[type="tel"]');
-
-if (pageHeader) {
-  pageHeader.classList.remove('page-header--no-js');
-}
 
 if (mainNav) {
   mainNav.classList.remove('main-nav--opened', 'main-nav--no-js');
@@ -17,6 +14,12 @@ if (mainNav) {
 if (mainNavToggle) {
   mainNavToggle.addEventListener('click', () => {
     mainNav.classList.toggle('main-nav--opened');
+
+    if (mainNav.classList.contains('main-nav--opened')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
   });
 }
 
@@ -50,11 +53,24 @@ form.addEventListener('submit', (evt) => {
 });
 
 phoneInput.addEventListener('input', () => {
-  const phoneNumberPattern = /^\d{11}$/;
+  const phoneNumberPattern = /(?:\(?\+\d{2}\)?\s*)?\d+(?:[ -]*\d+)*$/;
   if (!phoneNumberPattern.test(phoneInput.value)) {
     phoneInput.setCustomValidity('Номер телефона может содержать только цифры');
   } else {
     phoneInput.setCustomValidity('');
   }
   phoneInput.reportValidity();
+});
+
+
+// smooth scroll
+mainNavLinks.forEach((link) => {
+  link.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      block: 'start',
+      behavior: 'smooth',
+    });
+  });
 });

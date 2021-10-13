@@ -1,4 +1,4 @@
-.promo {
+.promo__wrapper {
   max-width: 390px;
 }
 
@@ -24,9 +24,22 @@
 
 @media (max-width: $tablet-width) {
   .promo {
+    padding-top: 134px;
+    padding-bottom: 80px;
+    background-image: url("../img/bg-promo@1x.jpg");
+    background-color: $color-gray-900;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-promo@2x.jpg");
+    }
+  }
+
+  .promo__wrapper {
     max-width: 435px;
     margin: 0 auto;
-    padding-bottom: 80px;
   }
 
   .promo h2 {
@@ -43,7 +56,13 @@
 
 @media (max-width: $mobile-width) {
   .promo {
+    padding-top: 119px;
     padding-bottom: 70px;
     min-height: 270px;
+  }
+
+  .promo__wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
