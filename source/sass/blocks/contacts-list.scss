@@ -5,7 +5,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 90px;
+}
+
+.contacts-list li {
+  margin-bottom: 22px;
+}
+
+.contacts-list li + li {
+  margin-left: 90px;
 }
 
 .contacts-list li:first-child {
@@ -41,10 +48,18 @@
 
 @media (max-width: $mobile-width) {
   .contacts-list {
-    gap: 22px;
+    display: block;
+  }
+
+  .contacts-list li + li {
+    margin-left: -13px;
   }
 
   .contacts-list li:first-child {
-    margin-left: 0;
+    margin-left: 7px;
+  }
+
+  .contacts-list a {
+    justify-content: center;
   }
 }
