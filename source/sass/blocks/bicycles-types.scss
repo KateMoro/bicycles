@@ -24,14 +24,11 @@
 .bicycles-types__card {
   position: relative;
   margin: 0;
+  margin-left: 25px;
+  margin-right: 25px;
   width: calc(33.33% - 50px);
   max-width: 342px;
   z-index: 2;
-}
-
-.bicycles-types__card {
-  margin-left: 25px;
-  margin-right: 25px;
 }
 
 .bicycles-types__card:nth-child(3n + 1)::before {
