@@ -6,7 +6,7 @@
   position: absolute;
   top: 318px;
   left: 171px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .page-header__wrapper {
@@ -14,7 +14,6 @@
   padding-bottom: 235px;
   display: flex;
   justify-content: space-between;
-
 }
 
 @media (min-width: $desktop-width-only) {

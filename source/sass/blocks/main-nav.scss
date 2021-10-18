@@ -45,7 +45,7 @@
   .main-nav ul::before {
     content: "";
     position: absolute;
-    top: 60px;
+    bottom: 0;
     left: 50%;
     margin-left: -437px;
     width: 874px;
@@ -79,17 +79,32 @@
   }
 
   // Меню открыто
+
+  .main-nav--opened::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 2;
+    background-color: $color-white;
+  }
+
   .main-nav--opened .main-nav__toggle {
     background-color: $color-white;
     background-image: url("../img/menu-close.svg");
   }
 
   .main-nav--opened ul {
-    position: absolute;
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    height: 100vh;
-    display: block;
+    z-index: 1;
+    overflow-y: scroll;
     background-color: $color-white;
   }
 

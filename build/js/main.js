@@ -72,5 +72,8 @@ mainNavLinks.forEach((link) => {
       block: 'start',
       behavior: 'smooth',
     });
+
+    mainNav.classList.remove('main-nav--opened');
+    document.body.style.overflow = 'auto';
   });
 });
